@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<style>
+    body
+    {
+        background-color: black;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    h1
+    {
+        color: white;
+        text-shadow: 0 0 10px aqua;
+    }
+    h2
+    {
+        color: red;
+    }
+    img
+    {
+        border-radius: 50%;
+        border: 4px solid white;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        box-shadow: 0 0 10px aqua;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    @keyframes leftRightMove
+    {
+        0%
+        {
+            transform: translateX(20px);
+        }
+        100%
+        {
+            transform: translateX(-20px);
+        }
+    }
+    a h1
+    {
+        animation: leftRightMove 1.5s ease-in-out infinite alternate;
+        color: greenyellow;
+        text-shadow: 0 0 10px red;
+    }
+</style>
+
+<h1>
+    Victor LIN Portfolio
+</h1>
+<h2>
+    Projects
+</h2>
+<img src="assets/images/pbr.png" onclick="alert('Hello World!')">
+<a href="https://victor-lin-portfolio.herokuapp.com/">
+    <h1>
+        Click Here
+    </h1>
+</a>
