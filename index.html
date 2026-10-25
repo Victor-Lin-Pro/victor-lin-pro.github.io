@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <style>
     body
     {
@@ -53,9 +52,20 @@
 <h2>
     Projects
 </h2>
-<img src="assets/images/pbr.png" onclick="alert('Hello World!')">
+<img src="assets/images/pbr.png" onclick="clickImage()">
 <a href="https://victor-lin-portfolio.herokuapp.com/">
     <h1>
         Click Here
     </h1>
 </a>
+
+<script>
+    function clickImage()
+    {
+        var n = 5;
+        for (var i = 0; i < n; i++)
+        {
+            alert("You clicked: " + i + " times!");
+        }
+    }
+</script>
