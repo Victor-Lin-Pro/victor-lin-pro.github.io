@@ -44,6 +44,22 @@
         color: greenyellow;
         text-shadow: 0 0 10px red;
     }
+    .noFinish
+    {
+        background-color: rgb(22, 21, 21);
+        color: red;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        border: 2px solid red;
+        box-shadow: 0 0 25px yellow;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        transform: scale(0.1);
+        opacity: 0;
+        transition: all 1s;
+    }
 </style>
 
 <h1>
@@ -52,7 +68,9 @@
 <h2>
     Projects
 </h2>
-<img src="assets/images/pbr.png" onclick="clickImage()">
+
+<img src="assets/images/pbr.png" onclick="clickImage()" alt="Picture of Victor LIN">
+
 <a href="https://victor-lin-portfolio.herokuapp.com/">
     <h1>
         Click Here
@@ -62,10 +80,27 @@
 <script>
     function clickImage()
     {
-        var n = 5;
+        var n = 100;
         for (var i = 0; i < n; i++)
         {
-            alert("You clicked: " + i + " times!");
+            // alert("You clicked: " + i + " times!");
+            
+            setTimeout(() =>
+            {
+                let box = document.createElement("div");
+                box.innerText = "Coming soon...";
+                document.body.appendChild(box);
+                box.className = "noFinish";
+                
+                box.offsetHeight;
+                
+                box.style.left = (Math.random() * 100) + "%";
+                box.style.top = (Math.random() * 100) + "%";
+                box.style.opacity = "1";
+                box.style.transform = `scale(${Math.random() + 0.5})`;
+                box.style.transform = `rotate(${Math.random() * 60 - 30}deg)`;
+            }, i * 100)
+            
         }
     }
 </script>
